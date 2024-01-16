@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 html,
 body {
   height: 100%;
@@ -11,12 +10,11 @@ body {
     135deg,
     #e6e9f0 0%,
     #eef1f5 100%
-  ); /* Modern degrade arka plan */
+  ); 
   font-family: "Poppins", sans-serif; /* Modern font */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 #root {
   height: 100%;
 }
