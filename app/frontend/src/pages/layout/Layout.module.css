@@ -1,78 +1,70 @@
 .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .header {
-    background-color: #222222;
-    color: #f2f2f2;
+  background-color: #5c6bc0; /* Daha açık bir arka plan rengi */
+  color: white;
+  padding: 10px 0; /* Başlık için ek padding */
 }
 
 .headerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 12px;
-    margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 12px;
 }
 
 .headerTitleContainer {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
-    color: #f2f2f2;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
 .headerLogo {
-    height: 40px;
+  height: 40px;
+  margin-right: 10px; /* Logoya sağda boşluk ekleyin */
 }
 
 .headerTitle {
-    margin-left: 12px;
-    font-weight: 600;
+  font-weight: 600;
+  font-size: 1.2em; /* Başlık font boyutu */
 }
 
 .headerNavList {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
 }
 
 .headerNavPageLink {
-    color: #f2f2f2;
-    text-decoration: none;
-    opacity: 0.75;
-
-    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    transition-duration: 500ms;
-    transition-property: opacity;
+  color: white;
+  text-decoration: none;
+  opacity: 0.75;
+  margin: 0 15px; /* Linkler arasında boşluk /
+    transition: opacity 300ms ease-in-out; / Yumuşak geçiş efekti */
 }
 
 .headerNavPageLink:hover {
-    opacity: 1;
+  opacity: 1;
+  text-decoration: underline; /* Hover durumunda alt çizgi */
 }
 
 .headerNavPageLinkActive {
-    color: #f2f2f2;
-    text-decoration: none;
-}
-
-.headerNavLeftMargin {
-    margin-left: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .headerRightText {
-    font-weight: normal;
-    margin-left: 40px;
+  font-weight: normal;
+  margin-left: 40px;
 }
 
-.microsoftLogo {
-    height: 23px;
-    font-weight: 600;
-}
-
+.microsoftLogo,
 .githubLogo {
-    height: 20px;
+  height: 23px;
+  margin-left: 10px; /* Logolar arasında boşluk */
 }
