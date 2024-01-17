@@ -10,7 +10,7 @@ const Layout = () => {
             <header className={styles.header} role="banner">
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer} aria-label="Home">
-                        <h1 className={styles.headerTitle}>Nova AI: BI with Advanced AI | Crimson Consulting</h1>
+                        <h1 className={styles.headerTitle}>Nova AI</h1>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>

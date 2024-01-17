@@ -1,104 +1,78 @@
-/* Layout.css - Enhanced for modern UI trends, responsiveness, and Crimson Consulting's brand style */
-
-:root {
-    /* Define primary color based on Crimson Consulting's brand palette */
-    --primary-bg-color: #5c6bc0; /* This should match the brand's primary color */
-    --text-color-light: #ffffff; /* For better readability and contrast */
-    --header-padding: 10px 0;
-    --nav-link-opacity: 0.75;
-    --nav-link-hover-opacity: 1;
-    --header-logo-size: 30px;
-    --nav-link-spacing: 20px;
-    --nav-link-transition-time: 0.3s;
-    --responsive-breakpoint: 768px; /* Common device width breakpoint */
-}
-
 .layout {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Use min-height to cover at least the full viewport height */
+    height: 100%;
 }
 
 .header {
-    background-color: var(--primary-bg-color);
-    color: var(--text-color-light);
-    padding: var(--header-padding);
+    background-color: #222222;
+    color: #f2f2f2;
 }
 
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Changed to 'space-between' for better spacing distribution */
-    padding: 0 2rem; /* Added padding instead of margin for better control */
+    justify-content: space-around;
+    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .headerTitleContainer {
     display: flex;
     align-items: center;
+    margin-right: 40px;
+    color: #f2f2f2;
     text-decoration: none;
 }
 
 .headerLogo {
-    height: var(--header-logo-size);
-    margin-right: 1rem; /* Consistent unit usage */
+    height: 40px;
 }
 
 .headerTitle {
-    font-weight: bold; /* 600 is equivalent to 'bold' */
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Maintain responsive font sizing */
+    margin-left: 12px;
+    font-weight: 600;
 }
 
 .headerNavList {
     display: flex;
     list-style: none;
-    gap: var(--nav-link-spacing); /* Consistent spacing based on variable */
+    padding-left: 0;
 }
 
 .headerNavPageLink {
-    color: inherit; /* Inherit color from parent for consistency */
+    color: #f2f2f2;
     text-decoration: none;
-    opacity: var(--nav-link-opacity);
-    transition: opacity var(--nav-link-transition-time) ease;
+    opacity: 0.75;
+
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-duration: 500ms;
+    transition-property: opacity;
 }
 
-.headerNavPageLink:hover,
-.headerNavPageLink:focus {
-    /* Added focus for accessibility */
-    opacity: var(--nav-link-hover-opacity);
-    text-decoration: underline; /* Only underline on hover/focus for clarity */
+.headerNavPageLink:hover {
+    opacity: 1;
 }
 
 .headerNavPageLinkActive {
-    text-decoration: none; /* Active link should not have underline */
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.headerNavLeftMargin {
+    margin-left: 20px;
 }
 
 .headerRightText {
-    margin-left: 2rem; /* Consistent unit usage */
+    font-weight: normal;
+    margin-left: 40px;
 }
 
-.microsoftLogo,
+.microsoftLogo {
+    height: 23px;
+    font-weight: 600;
+}
+
 .githubLogo {
-    height: 23px; /* Keep logos at consistent height */
-    margin-left: var(--nav-link-spacing); /* Use the same variable for consistent spacing */
-}
-
-/* Responsive adjustments */
-@media (max-width: var(--responsive-breakpoint)) {
-    .headerContainer {
-        flex-direction: column;
-        align-items: center; /* Center items in mobile view */
-    }
-
-    .headerNavList {
-        flex-direction: column;
-        align-items: center; /* Center navigation items vertically */
-        width: 100%; /* Full width for better tap targets */
-        gap: 0.5rem; /* Smaller gap for vertical navigation */
-    }
-
-    .headerNavPageLink,
-    .headerRightText {
-        text-align: center; /* Center text for mobile readability */
-        width: 100%; /* Full width links for easier touch */
-    }
+    height: 20px;
 }

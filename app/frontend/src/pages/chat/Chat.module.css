@@ -1,27 +1,13 @@
-/* ChatModule.css - Refined for modern, branded UI with responsive design */
-
-:root {
-    /* Colors and shared styles */
-    --chat-bg-color: #f2f2f2; /* Light background for chat area */
-    --text-color-dark: #333; /* Dark text for better readability */
-    --chat-message-max-width: 80%; /* Maximum width of chat messages */
-    --chat-border-radius: 8px; /* Border radius for chat bubbles */
-    --chat-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    --chat-input-height: 100px; /* Fixed height for chat input */
-    --chat-transition-duration: 0.3s; /* Smooth transition for interactive elements */
-}
-
 .container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-top: 1.25rem; /* 20px top padding */
+    margin-top: 20px;
 }
 
 .chatRoot {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
 }
 
 .chatContainer {
@@ -30,7 +16,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 1rem; /* Padding for mobile screens */
 }
 
 .chatEmptyState {
@@ -39,79 +24,92 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Centered text for empty state */
-}
-
-.chatEmptyStateTitle,
-.chatEmptyStateSubtitle {
-    font-weight: bold; /* 600 is equivalent to 'bold' */
-    color: var(--text-color-dark); /* Use dark color for contrast */
+    max-height: 1024px;
+    padding-top: 60px;
 }
 
 .chatEmptyStateTitle {
-    font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive font size */
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.chatEmptyStateSubtitle {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-height: 780px) {
+    .chatEmptyState {
+        padding-top: 0;
+    }
+
+    .chatEmptyStateTitle {
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
 }
 
 .chatMessageStream {
     flex-grow: 1;
+    max-height: 1024px;
+    max-width: 1028px;
+    width: 100%;
     overflow-y: auto;
+    padding-left: 24px;
+    padding-right: 24px;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem; /* Consistent spacing */
 }
 
 .chatMessageGpt {
-    box-shadow: var(--chat-box-shadow);
-    border-radius: var(--chat-border-radius);
-    background-color: white; /* Ensure message bubbles are distinguishable */
+    margin-bottom: 20px;
+    max-width: 80%;
+    display: flex;
+    min-width: 500px;
+}
+
+.chatMessageGptMinWidth {
+    max-width: 500px;
+    margin-bottom: 20px;
 }
 
 .chatInput {
     position: sticky;
     bottom: 0;
+    flex: 0 0 100px;
+    padding-top: 12px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     width: 100%;
-    height: var(--chat-input-height);
-    padding: 0.75rem; /* Padding inside chat input */
-    background: var(--chat-bg-color);
-    border-top: 1px solid #ddd; /* Separator for the input area */
-    transition: background-color var(--chat-transition-duration);
+    max-width: 1028px;
+    background: #f2f2f2;
 }
 
-.chatInput:focus-within {
-    background-color: #eceff1; /* Lighten background on focus */
-}
-
-.chatAnalysisPanel,
-.loadingLogo {
+.chatAnalysisPanel {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow-y: auto;
+    max-height: 89vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.chatSettingsSeparator {
+    margin-top: 15px;
+}
+
+.loadingLogo {
+    font-size: 28px;
 }
 
 .commandsContainer {
     display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
+    align-self: flex-end;
 }
 
 .commandButton {
-    margin: 0.5rem;
-    transition: transform var(--chat-transition-duration);
-}
-
-.commandButton:hover {
-    transform: translateY(-0.125rem); /* Slight lift effect on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .chatMessageStream,
-    .chatInput {
-        padding: 0.5rem; /* Smaller padding on mobile devices */
-    }
-
-    .chatMessageGpt {
-        width: 100%; /* Full width chat messages on smaller screens */
-    }
+    margin-right: 20px;
+    margin-bottom: 20px;
 }

@@ -1,95 +1,66 @@
-/* OneShotModule.css - Optimized for modern UI design and responsiveness */
-
-:root {
-    --oneshot-section-margin: 1.25rem; /* 20px */
-    --oneshot-title-font-size: clamp(1.75rem, 4vw, 2.5rem); /* Adjusted for better responsiveness */
-    --oneshot-subsection-padding: 1rem;
-    --oneshot-max-width: 800px;
-    --oneshot-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --oneshot-border-radius: 10px;
-    --oneshot-transition-duration: 0.3s;
-    --brand-primary-color: #5c6bc0; /* Placeholder for brand color */
-    --brand-secondary-color: #ffffff; /* White color for contrast */
-}
-
 .oneshotContainer {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    padding-top: var(--oneshot-section-margin);
-    width: 100%;
 }
 
-.oneshotTopSection,
-.oneshotBottomSection {
+.oneshotTopSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: var(--oneshot-max-width);
     width: 100%;
-    padding: var(--oneshot-subsection-padding);
 }
 
 .oneshotBottomSection {
+    display: flex;
     flex: 1;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: var(--oneshot-section-margin);
+    align-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .oneshotTitle {
-    font-size: var(--oneshot-title-font-size);
-    font-weight: bold;
-    color: var(--brand-primary-color);
-    margin-top: var(--oneshot-section-margin);
-    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 130px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .oneshotTitle {
-        margin-top: var(--oneshot-section-margin);
-    }
-
-    .oneshotTopSection,
-    .oneshotBottomSection {
-        padding: var(--oneshot-subsection-padding);
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 0;
     }
 }
 
-.oneshotQuestionInput,
-.oneshotAnswerContainer {
+.oneshotQuestionInput {
+    max-width: 800px;
     width: 100%;
-    padding: 0 var(--padding-horizontal);
-    border: 1px solid #ccc; /* Light border for input and answer container */
-    border-radius: var(--oneshot-border-radius);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.oneshotAnswerContainer {
+    max-width: 800px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .oneshotAnalysisPanel {
-    box-shadow: var(--oneshot-box-shadow);
-    border-radius: var(--oneshot-border-radius);
-    margin: var(--oneshot-section-margin);
+    width: 600px;
+    margin-left: 20px;
+}
+
+.oneshotSettingsSeparator {
+    margin-top: 15px;
 }
 
 .settingsButton {
     align-self: flex-end;
-    margin: var(--oneshot-section-margin);
-    border-radius: var(--oneshot-border-radius);
-    box-shadow: var(--oneshot-box-shadow);
-    transition: box-shadow var(--oneshot-transition-duration);
-    background-color: var(--brand-secondary-color);
-    color: var(--brand-primary-color);
-    padding: 0.5rem 1rem; /* Consistent padding for buttons */
-    cursor: pointer; /* Indicates the button is clickable */
-    border: none; /* Removes default border */
-}
-
-.settingsButton:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Further responsive adjustments for typography and spacing */
-@media only screen and (max-width: 480px) {
-    .oneshotTitle {
-        font-size: var(--primary-font-size-medium);
-    }
+    margin-right: 20px;
+    margin-top: 20px;
 }

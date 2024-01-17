@@ -1,14 +1,3 @@
-/* index.css - Global styles with a responsive and branded approach */
-
-/* Define brand color variables */
-:root {
-    --crimson-primary-color: #9c27b0; /* Placeholder for Crimson Consulting's primary brand color */
-    --crimson-accent-color: #f44336; /* Placeholder for Crimson Consulting's accent brand color */
-    --crimson-bg-gradient-start: #e6e9f0;
-    --crimson-bg-gradient-end: #eef1f5;
-    --crimson-font-family: "Poppins", sans-serif;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -18,37 +7,27 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, var(--crimson-bg-gradient-start) 0%, var(--crimson-bg-gradient-end) 100%);
-    font-family: var(--crimson-font-family);
+}
+
+html {
+    background: #f2f2f2;
+
+    font-family:
+        "Segoe UI",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--crimson-primary-color); /* Default text color set to brand primary color */
 }
 
 #root {
     height: 100%;
-}
-
-/* Responsive typography */
-body {
-    font-size: 16px; /* Base font size */
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Slightly smaller font size for mobile devices */
-    }
-}
-
-/* Utility classes for common spacings and responsive adjustments */
-.padding-horizontal {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-@media (max-width: 768px) {
-    .padding-horizontal {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 }
