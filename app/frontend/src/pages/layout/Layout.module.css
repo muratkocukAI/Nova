@@ -1,68 +1,104 @@
+/* Layout.css - Enhanced for modern UI trends, responsiveness, and Crimson Consulting's brand style */
+
+:root {
+    /* Define primary color based on Crimson Consulting's brand palette */
+    --primary-bg-color: #5c6bc0; /* This should match the brand's primary color */
+    --text-color-light: #ffffff; /* For better readability and contrast */
+    --header-padding: 10px 0;
+    --nav-link-opacity: 0.75;
+    --nav-link-hover-opacity: 1;
+    --header-logo-size: 30px;
+    --nav-link-spacing: 20px;
+    --nav-link-transition-time: 0.3s;
+    --responsive-breakpoint: 768px; /* Common device width breakpoint */
+}
+
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh; /* Use min-height to cover at least the full viewport height */
 }
 
 .header {
-    background-color: #5c6bc0; /* Daha açık bir arka plan rengi */
-    color: white;
-    padding: 10px 0; /* Başlık için ek padding */
+    background-color: var(--primary-bg-color);
+    color: var(--text-color-light);
+    padding: var(--header-padding);
 }
 
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 0 12px;
+    justify-content: space-between; /* Changed to 'space-between' for better spacing distribution */
+    padding: 0 2rem; /* Added padding instead of margin for better control */
 }
 
 .headerTitleContainer {
     display: flex;
     align-items: center;
-    color: white;
     text-decoration: none;
 }
 
 .headerLogo {
-    height: 40px;
-    margin-right: 10px; /* Logoya sağda boşluk ekleyin */
+    height: var(--header-logo-size);
+    margin-right: 1rem; /* Consistent unit usage */
 }
 
 .headerTitle {
-    font-weight: 600;
-    font-size: 1.2em; /* Başlık font boyutu */
+    font-weight: bold; /* 600 is equivalent to 'bold' */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Maintain responsive font sizing */
 }
 
 .headerNavList {
     display: flex;
     list-style: none;
-    padding-left: 0;
+    gap: var(--nav-link-spacing); /* Consistent spacing based on variable */
 }
 
 .headerNavPageLink {
-    color: white;
-    text-decoration:none;
-	opacity: 0.75;
-	margin: 0 15px;
+    color: inherit; /* Inherit color from parent for consistency */
+    text-decoration: none;
+    opacity: var(--nav-link-opacity);
+    transition: opacity var(--nav-link-transition-time) ease;
 }
 
-.headerNavPageLink:hover {
-opacity: 1;
-text-decoration: underline; /* Hover durumunda alt çizgi */
+.headerNavPageLink:hover,
+.headerNavPageLink:focus {
+    /* Added focus for accessibility */
+    opacity: var(--nav-link-hover-opacity);
+    text-decoration: underline; /* Only underline on hover/focus for clarity */
 }
 
 .headerNavPageLinkActive {
-color: white;
-text-decoration: none;
+    text-decoration: none; /* Active link should not have underline */
 }
 
 .headerRightText {
-font-weight: normal;
-margin-left: 40px;
+    margin-left: 2rem; /* Consistent unit usage */
 }
 
-.microsoftLogo, .githubLogo {
-height: 23px;
-margin-left: 10px; /* Logolar arasında boşluk */
+.microsoftLogo,
+.githubLogo {
+    height: 23px; /* Keep logos at consistent height */
+    margin-left: var(--nav-link-spacing); /* Use the same variable for consistent spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--responsive-breakpoint)) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: center; /* Center items in mobile view */
+    }
+
+    .headerNavList {
+        flex-direction: column;
+        align-items: center; /* Center navigation items vertically */
+        width: 100%; /* Full width for better tap targets */
+        gap: 0.5rem; /* Smaller gap for vertical navigation */
+    }
+
+    .headerNavPageLink,
+    .headerRightText {
+        text-align: center; /* Center text for mobile readability */
+        width: 100%; /* Full width links for easier touch */
+    }
 }

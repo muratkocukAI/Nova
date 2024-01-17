@@ -12,7 +12,7 @@
   "cdnProfiles": "nova-cdnProf-",
   "cdnProfilesEndpoints": "nova-cdnEndp-",
   "cognitiveServicesAccounts": "nova-cogSvc-",
-  "cognitiveServicesFormRecognizer": "nova-cogFr-",
+  "cognitiveServicesFormRecognizer": "nova-cogFrm-",
   "cognitiveServicesComputerVision": "nova-cogCv-",
   "cognitiveServicesTextAnalytics": "nova-cogTa-",
   "computeAvailabilitySets": "nova-availSet-",
