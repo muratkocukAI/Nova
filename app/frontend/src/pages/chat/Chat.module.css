@@ -1,3 +1,17 @@
+/* Define CSS variables for easy theme management */
+:root {
+    --chat-background: #f2f2f2;
+    --chat-message-background: #fff;
+    --chat-input-height: 100px;
+    --chat-input-background: var(--chat-background);
+    --primary-text-color: #333;
+    --secondary-text-color: #666;
+    --primary-accent-color: #850f34; /* Crimson's brand color */
+    --loading-logo-size: 28px;
+    --border-radius: 8px; /* Rounded corners for modern UI */
+    --shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
 .container {
     flex: 1;
     display: flex;
@@ -8,6 +22,7 @@
 .chatRoot {
     flex: 1;
     display: flex;
+    color: var(--primary-text-color);
 }
 
 .chatContainer {
@@ -26,12 +41,13 @@
     align-items: center;
     max-height: 1024px;
     padding-top: 60px;
+    color: var(--secondary-text-color);
 }
 
 .chatEmptyStateTitle {
     font-size: 4rem;
     font-weight: 600;
-    margin-top: 0;
+    margin: 0;
     margin-bottom: 30px;
 }
 
@@ -47,20 +63,22 @@
 
     .chatEmptyStateTitle {
         font-size: 3rem;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
 .chatMessageStream {
     flex-grow: 1;
     max-height: 1024px;
-    max-width: 1028px;
+    max-width: 100%;
     width: 100%;
     overflow-y: auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
+    background: var(--chat-message-background);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
 }
 
 .chatMessageGpt {
@@ -68,6 +86,9 @@
     max-width: 80%;
     display: flex;
     min-width: 500px;
+    background: var(--chat-message-background);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
 }
 
 .chatMessageGptMinWidth {
@@ -78,38 +99,57 @@
 .chatInput {
     position: sticky;
     bottom: 0;
-    flex: 0 0 100px;
-    padding-top: 12px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
+    flex: 0 0 var(--chat-input-height);
+    padding: 12px 24px;
     width: 100%;
     max-width: 1028px;
-    background: #f2f2f2;
+    background: var(--chat-input-background);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
 }
 
 .chatAnalysisPanel {
     flex: 1;
     overflow-y: auto;
     max-height: 89vh;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
 }
 
 .chatSettingsSeparator {
     margin-top: 15px;
+    border-bottom: 1px solid var(--secondary-text-color);
 }
 
 .loadingLogo {
-    font-size: 28px;
+    font-size: var(--loading-logo-size);
 }
 
 .commandsContainer {
     display: flex;
     align-self: flex-end;
+    margin: 20px;
 }
 
 .commandButton {
     margin-right: 20px;
-    margin-bottom: 20px;
+    background-color: var(--primary-accent-color);
+    color: var(--chat-input-background);
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.commandButton:hover {
+    background-color: darken(var(--primary-accent-color), 10%);
+}
+
+/* Utility function to darken colors */
+function darken(color, percent) {
+    // This is a placeholder for an actual color darkening function
+    // In practice, this would need to be done via a preprocessor or JavaScript
+    return color;
 }

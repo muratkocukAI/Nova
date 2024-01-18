@@ -2,61 +2,59 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .header {
-    background-color: #222222;
-    color: #f2f2f2;
+    background-color: var(--primary-background);
+    color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-right: 12px;
-    margin-left: 12px;
+    justify-content: space-between;
+    padding: 0 12px;
 }
 
 .headerTitleContainer {
     display: flex;
     align-items: center;
-    margin-right: 40px;
-    color: #f2f2f2;
-    text-decoration: none;
 }
 
 .headerLogo {
-    height: 40px;
+    height: var(--header-logo-size);
 }
 
 .headerTitle {
     margin-left: 12px;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .headerNavList {
     display: flex;
     list-style: none;
     padding-left: 0;
+    align-items: center;
 }
 
 .headerNavPageLink {
-    color: #f2f2f2;
+    color: inherit;
     text-decoration: none;
     opacity: 0.75;
-
-    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    transition-duration: 500ms;
-    transition-property: opacity;
+    transition: opacity var(--transition-speed) ease-in-out;
 }
 
-.headerNavPageLink:hover {
-    opacity: 1;
+.headerNavPageLink:hover,
+.headerNavPageLink:focus {
+    opacity: var(--link-hover-opacity);
 }
 
 .headerNavPageLinkActive {
-    color: #f2f2f2;
-    text-decoration: none;
+    color: inherit;
+    text-decoration: underline;
 }
 
 .headerNavLeftMargin {
@@ -68,11 +66,22 @@
     margin-left: 40px;
 }
 
+.microsoftLogo,
+.githubLogo {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.microsoftLogo:hover,
+.githubLogo:hover {
+    transform: scale(1.05);
+}
+
 .microsoftLogo {
-    height: 23px;
-    font-weight: 600;
+    height: var(--microsoft-logo-size);
 }
 
 .githubLogo {
-    height: 20px;
+    height: var(--github-logo-size);
 }

@@ -1,3 +1,15 @@
+/* Define CSS variables for easy theme management */
+:root {
+    --primary-background: #222222;
+    --secondary-background: #f2f2f2;
+    --primary-color: #f2f2f2;
+    --link-hover-opacity: 0.85;
+    --transition-speed: 0.3s;
+    --header-logo-size: 40px;
+    --microsoft-logo-size: 23px;
+    --github-logo-size: 20px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,12 +19,9 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-html {
-    background: #f2f2f2;
-
+    background: var(--secondary-background);
     font-family:
+        "Inter",
         "Segoe UI",
         -apple-system,
         BlinkMacSystemFont,
@@ -26,6 +35,7 @@ html {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--primary-color);
 }
 
 #root {
