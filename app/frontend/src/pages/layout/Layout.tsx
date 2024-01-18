@@ -27,14 +27,14 @@ const Layout = () => {
                                 <NavLink
                                     to="/qa"
                                     className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}
-                                    aria-label="Inquire AI"
+                                    aria-label="Ask to AI"
                                 >
-                                    Inquire AI
+                                    Ask to AI
                                 </NavLink>
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
+                    <h4 className={styles.headerRightText}>Crimson Consulting (AI/ML Workbench)</h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>
