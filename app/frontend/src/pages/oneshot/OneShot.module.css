@@ -66,7 +66,7 @@
     background-color: var(--background-color);
     color: var(--text-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: var(--primary-margin) 0;
 }
 
@@ -96,11 +96,4 @@
 
 .settingsButton:hover {
     background-color: darken(var(--primary-color), 10%);
-}
-
-/* Utility function to darken colors */
-function darken(color, percent) {
-    // This is a placeholder for an actual color darkening function
-    // In practice, this would need to be done via a preprocessor or JavaScript
-    return color;
 }

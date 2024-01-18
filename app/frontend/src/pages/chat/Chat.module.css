@@ -9,7 +9,7 @@
     --primary-accent-color: #850f34; /* Crimson's brand color */
     --loading-logo-size: 28px;
     --border-radius: 8px; /* Rounded corners for modern UI */
-    --shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .container {
@@ -145,11 +145,4 @@
 
 .commandButton:hover {
     background-color: darken(var(--primary-accent-color), 10%);
-}
-
-/* Utility function to darken colors */
-function darken(color, percent) {
-    // This is a placeholder for an actual color darkening function
-    // In practice, this would need to be done via a preprocessor or JavaScript
-    return color;
 }
