@@ -3,39 +3,42 @@
     --primary-background: #222222;
     --secondary-background: #f2f2f2;
     --primary-color: #f2f2f2;
+    --secondary-text-color: #666;
+    --primary-accent-color: #850f34; /* Crimson's brand color */
     --link-hover-opacity: 0.85;
     --transition-speed: 0.3s;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    --font-smoothing: antialiased;
+    --text-color: #333;
+    --separator-color: #ddd;
+    --container-max-width: 800px;
+    --panel-width: 600px;
+    --primary-margin: 20px;
+    --input-padding: 10px;
+    --settings-button-margin: 20px;
     --header-logo-size: 40px;
     --microsoft-logo-size: 23px;
     --github-logo-size: 20px;
 }
 
+/* General Reset and Base Styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
     height: 100%;
-    margin: 0;
-    padding: 0;
     background: var(--secondary-background);
-    font-family:
-        "Inter",
-        "Segoe UI",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    -webkit-font-smoothing: var(--font-smoothing);
     -moz-osx-font-smoothing: grayscale;
-    color: var(--primary-color);
 }
 
 #root {

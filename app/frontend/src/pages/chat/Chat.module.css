@@ -1,146 +1,73 @@
-/* Define CSS variables for easy theme management */
-:root {
-    --chat-background: #f2f2f2;
-    --chat-message-background: #fff;
-    --chat-input-height: 100px;
-    --chat-input-background: var(--chat-background);
-    --primary-text-color: #333;
-    --secondary-text-color: #666;
-    --primary-accent-color: #850f34; /* Crimson's brand color */
-    --loading-logo-size: 28px;
-    --border-radius: 8px; /* Rounded corners for modern UI */
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
+/* Chat Module Styles */
 .container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: var(--primary-margin);
 }
 
-.chatRoot {
-    flex: 1;
-    display: flex;
-    color: var(--primary-text-color);
-}
-
-.chatContainer {
-    flex: 1;
+.chatRoot,
+.chatContainer,
+.chatEmptyState,
+.chatMessageStream,
+.chatMessageGpt,
+.chatMessageGptMinWidth,
+.chatInput,
+.chatAnalysisPanel,
+.oneshotContainer,
+.oneshotTopSection,
+.oneshotBottomSection,
+.oneshotQuestionInput,
+.oneshotAnswerContainer,
+.oneshotAnalysisPanel {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-
-.chatEmptyState {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-height: 1024px;
-    padding-top: 60px;
-    color: var(--secondary-text-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--input-padding);
+    max-width: var(--container-max-width);
 }
 
 .chatEmptyStateTitle {
-    font-size: 4rem;
-    font-weight: 600;
-    margin: 0;
-    margin-bottom: 30px;
+    font-size: var(--heading-font-size);
+    font-weight: var(--primary-font-weight);
+    margin-bottom: var(--primary-margin);
 }
 
-.chatEmptyStateSubtitle {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-@media only screen and (max-height: 780px) {
-    .chatEmptyState {
-        padding-top: 0;
-    }
-
+@media only screen and (max-width: 800px) {
     .chatEmptyStateTitle {
-        font-size: 3rem;
-        margin-bottom: 0;
+        font-size: var(--subheading-font-size);
     }
-}
-
-.chatMessageStream {
-    flex-grow: 1;
-    max-height: 1024px;
-    max-width: 100%;
-    width: 100%;
-    overflow-y: auto;
-    padding: 0 24px;
-    display: flex;
-    flex-direction: column;
-    background: var(--chat-message-background);
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
 }
 
 .chatMessageGpt {
-    margin-bottom: 20px;
+    margin-bottom: var(--primary-margin);
     max-width: 80%;
-    display: flex;
     min-width: 500px;
-    background: var(--chat-message-background);
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
-}
-
-.chatMessageGptMinWidth {
-    max-width: 500px;
-    margin-bottom: 20px;
 }
 
 .chatInput {
     position: sticky;
     bottom: 0;
-    flex: 0 0 var(--chat-input-height);
-    padding: 12px 24px;
-    width: 100%;
-    max-width: 1028px;
+    flex: 0 0 auto;
     background: var(--chat-input-background);
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
 }
 
 .chatAnalysisPanel {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 89vh;
-    margin: 0 20px;
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
+    width: var(--panel-width);
 }
 
 .chatSettingsSeparator {
-    margin-top: 15px;
-    border-bottom: 1px solid var(--secondary-text-color);
-}
-
-.loadingLogo {
-    font-size: var(--loading-logo-size);
+    height: 1px;
+    background-color: var(--separator-color);
+    width: 100%;
 }
 
 .commandsContainer {
-    display: flex;
     align-self: flex-end;
-    margin: 20px;
-}
-
-.commandButton {
-    margin-right: 20px;
-    background-color: var(--primary-accent-color);
-    color: var(--chat-input-background);
-    border: none;
-    padding: 10px 15px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: var(--primary-margin);
 }
 
 .commandButton:hover {
