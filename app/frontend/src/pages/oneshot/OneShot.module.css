@@ -3,8 +3,6 @@
     flex: 1;
     flex-direction: column;
     align-items: center;
-    font-size: var(--main-font-size);
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 .oneshotTopSection {
@@ -12,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 20px; /* Add padding for better spacing */
 }
 
 .oneshotBottomSection {
@@ -21,64 +20,61 @@
     justify-content: center;
     align-content: flex-start;
     width: 100%;
-    margin-top: var(--primary-margin);
+    margin-top: 20px;
 }
 
 .oneshotTitle {
-    font-size: var(--heading-font-size);
-    font-weight: var(--primary-font-weight);
+    font-size: 4rem;
+    font-weight: 600;
     margin-top: 130px;
-    color: var(--primary-color);
-    text-align: center;
+    color: #333; /* Improved readability with darker color */
+    text-align: center; /* Center-align for better presentation */
 }
 
 @media only screen and (max-width: 800px) {
     .oneshotTitle {
-        font-size: var(--subheading-font-size);
-        margin-top: var(--settings-button-margin);
+        font-size: 3rem;
+        margin-top: 20px; /* Reduced margin-top for smaller screens */
     }
 }
 
 .oneshotQuestionInput,
-.oneshotAnswerContainer,
-.oneshotAnalysisPanel {
-    max-width: var(--container-max-width);
+.oneshotAnswerContainer {
+    max-width: 800px;
     width: 100%;
-    padding: var(--input-padding);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: var(--primary-margin) auto;
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Added margin for better separation */
 }
 
 .oneshotAnalysisPanel {
-    width: var(--panel-width);
-    margin: var(--primary-margin) auto;
+    width: 600px;
+    margin: 20px auto; /* Centering the panel */
+    padding: 20px; /* Additional padding for content */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
 }
 
 .oneshotSettingsSeparator {
-    height: 1px;
-    background-color: var(--separator-color);
-    margin-top: var(--primary-margin);
-    width: calc(100% - 2 * var(--primary-margin));
+    margin-top: 15px;
+    width: 100%; /* Ensure separator spans full width */
+    border-bottom: 1px solid #ddd; /* Define a clear separator */
 }
 
 .settingsButton {
     align-self: flex-end;
-    margin: var(--settings-button-margin);
-    padding: var(--input-padding);
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: #850f34; /* Use brand color for button */
+    color: #fff;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 4px;
     cursor: pointer;
-    transition:
-        transform var(--transition-speed) ease-in-out,
-        background-color var(--transition-speed) ease;
-}
+    transition: background-color 0.3s ease;
 
-.settingsButton:hover {
-    background-color: darken(var(--primary-color), 10%);
-    transform: scale(var(--hover-scale));
+    /* Button hover effect */
+    &:hover {
+        background-color: darken(#850f34, 10%);
+    }
 }

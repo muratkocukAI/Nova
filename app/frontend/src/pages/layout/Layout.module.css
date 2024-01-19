@@ -1,76 +1,85 @@
-/* Layout Styles */
 .layout {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow-x: hidden;
 }
 
 .header {
-    background-color: var(--primary-background);
-    color: var(--primary-color);
-    box-shadow: var(--box-shadow);
-    padding: 0 var(--primary-margin);
+    background-color: #222222;
+    color: #f2f2f2;
+    padding: 0 20px; /* Added padding for better spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
 }
 
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Changed to space-between for better distribution */
+    padding: 12px 0; /* Added vertical padding */
+    max-width: 1200px; /* Restricting max width for larger screens */
+    margin: auto; /* Centering container */
 }
 
-.headerTitleContainer,
-.headerNavList,
-.microsoftLogo,
-.githubLogo {
+.headerTitleContainer {
     display: flex;
     align-items: center;
+    margin-right: 40px; /* Adjusted margin for spacing */
+    text-decoration: none;
 }
 
 .headerLogo {
-    height: var(--header-logo-size);
+    height: 40px;
+    transition: transform 0.3s ease; /* Smooth transition for logo */
+}
+
+.headerLogo:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
 }
 
 .headerTitle {
-    margin-left: var(--primary-margin);
-    font-weight: bold;
-    font-size: 1.25rem;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 1.2rem; /* Increased font size for visibility */
+}
+
+.headerNavList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center; /* Ensuring vertical alignment */
 }
 
 .headerNavPageLink {
     color: inherit;
     text-decoration: none;
     opacity: 0.75;
-    transition: opacity var(--transition-speed) ease-in-out;
+    margin: 0 10px; /* Adding horizontal margin */
+    transition: opacity 0.3s ease; /* Smoother transition for hover effect */
 }
 
-.headerNavPageLink:hover,
-.headerNavPageLink:focus {
-    opacity: var(--link-hover-opacity);
+.headerNavPageLink:hover {
+    opacity: 1;
 }
 
 .headerNavPageLinkActive {
-    text-decoration: underline;
+    text-decoration: underline; /* Highlighting active link */
 }
 
 .headerNavLeftMargin {
-    margin-left: var(--primary-margin);
+    margin-left: 20px;
 }
 
 .headerRightText {
-    margin-left: var(--panel-width);
-}
-
-.microsoftLogo:hover,
-.githubLogo:hover {
-    transform: scale(1.05);
-    transition: transform var(--transition-speed) ease-in-out;
+    font-weight: normal;
+    margin-left: 40px;
 }
 
 .microsoftLogo {
-    height: var(--microsoft-logo-size);
+    height: 23px;
+    font-weight: 600;
 }
 
 .githubLogo {
-    height: var(--github-logo-size);
+    height: 20px;
+    margin-left: 10px; /* Added left margin for spacing */
 }
