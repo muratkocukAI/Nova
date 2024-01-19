@@ -12,8 +12,8 @@
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Changed to space-between for overall even spacing */
-    padding: 0 12px; /* Added padding for consistent spacing */
+    justify-content: space-between;
+    padding: 0 12px;
 }
 
 .headerTitleContainer {
@@ -35,7 +35,7 @@
 .headerNavList {
     display: flex;
     list-style: none;
-    gap: 25px; /* Utilizing gap for consistent spacing between list items */
+    gap: 25px;
 }
 
 .headerNavPageLink {
@@ -43,32 +43,18 @@
     text-decoration: none;
     opacity: 0.75;
     transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
-    padding: 0 10px; /* Padding added for clickable area and to ensure spacing on sides */
+    padding: 0 10px;
 }
 
 .headerNavPageLink:hover {
     opacity: 1;
 }
 
-/* Responsive adjustment if necessary */
-@media (max-width: 768px) {
-    .headerContainer {
-        justify-content: space-between; /* Adjusts spacing on smaller screens */
-    }
-
-    .headerNavList {
-        gap: 10px; /* Smaller gap for smaller screens */
-    }
-
-    .headerNavPageLink {
-        padding: 0 5px; /* Smaller padding for smaller screens */
-    }
-}
 .headerNavPageLinkActive {
     color: #f2f2f2;
     text-decoration: none;
-    font-weight: bold; /* Make active link bolder */
-    opacity: 1; /* Active link should be fully opaque */
+    font-weight: bold;
+    opacity: 1;
 }
 
 .headerNavLeftMargin {
@@ -79,6 +65,36 @@
     font-weight: normal;
     margin-left: 40px;
 }
+
 .crimsonLogo {
     height: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerTitleContainer {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .headerNavList {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .headerNavPageLink {
+        padding: 5px 0;
+    }
+
+    .headerNavLeftMargin {
+        margin-left: 0;
+        margin-right: auto;
+    }
 }
