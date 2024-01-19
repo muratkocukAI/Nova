@@ -262,8 +262,8 @@ const Chat = () => {
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
                             <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>Talk with Nova AI (Chat)</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Interact, Explore, and Innovate</h2>
+                            <h1 className={styles.chatEmptyStateTitle}>Conversational Intelligence</h1>
+                            <h2 className={styles.chatEmptyStateSubtitle}>Dive Deep into Business Intelligence with Nova AI</h2>
                             <ExampleList onExampleClicked={onExampleClicked} useGPT4V={useGPT4V} />
                         </div>
                     ) : (

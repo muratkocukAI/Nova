@@ -170,10 +170,10 @@ export function Component(): JSX.Element {
         <div className={styles.oneshotContainer}>
             <div className={styles.oneshotTopSection}>
                 <SettingsButton className={styles.settingsButton} onClick={() => setIsConfigPanelOpen(!isConfigPanelOpen)} />
-                <h1 className={styles.oneshotTitle}>Ask your data</h1>
+                <h1 className={styles.oneshotTitle}>Discover Insights</h1>
                 <div className={styles.oneshotQuestionInput}>
                     <QuestionInput
-                        placeholder="Example: Does my plan cover annual eye exams?"
+                        placeholder="Elevate your business intelligence with specific data inquiries."
                         disabled={isLoading}
                         initQuestion={question}
                         onSend={question => makeApiRequest(question)}

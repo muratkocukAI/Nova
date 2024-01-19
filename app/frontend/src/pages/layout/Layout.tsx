@@ -1,5 +1,5 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
-import github from "../../assets/github.svg";
+import crimson from "../../assets/crimson.svg";
 import styles from "./Layout.module.css";
 import { useLogin } from "../../authConfig";
 import { LoginButton } from "../../components/LoginButton";
@@ -27,14 +27,26 @@ const Layout = () => {
                                 <NavLink
                                     to="/qa"
                                     className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}
-                                    aria-label="Ask to AI"
+                                    aria-label="Insight Search"
                                 >
-                                    Ask to AI
+                                    Insight Search
                                 </NavLink>
+                            </li>
+                            <li className={styles.headerNavLeftMargin}>
+                                <a href="https://crimsoninnovate.com" target={"_blank"} title="Crimson Consulting">
+                                    <img
+                                        src={crimson}
+                                        alt="Crimson Consulting"
+                                        aria-label="Crimson Consulting"
+                                        width="20px"
+                                        height="20px"
+                                        className={styles.crimsonLogo}
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Crimson Consulting (AI/ML Workbench)</h4>
+                    <h4 className={styles.headerRightText}>Crimson Consulting</h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>

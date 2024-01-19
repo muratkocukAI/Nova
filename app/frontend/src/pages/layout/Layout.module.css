@@ -5,64 +5,70 @@
 }
 
 .header {
-    background-color: #222222;
+    background: linear-gradient(135deg, #9d152c, #dc143c);
     color: #f2f2f2;
-    padding: 0 20px; /* Added padding for better spacing */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
 }
 
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Changed to space-between for better distribution */
-    padding: 12px 0; /* Added vertical padding */
-    max-width: 1200px; /* Restricting max width for larger screens */
-    margin: auto; /* Centering container */
+    justify-content: space-between; /* Changed to space-between for overall even spacing */
+    padding: 0 12px; /* Added padding for consistent spacing */
 }
 
 .headerTitleContainer {
     display: flex;
     align-items: center;
-    margin-right: 40px; /* Adjusted margin for spacing */
     text-decoration: none;
+    color: #f2f2f2;
 }
 
 .headerLogo {
     height: 40px;
-    transition: transform 0.3s ease; /* Smooth transition for logo */
-}
-
-.headerLogo:hover {
-    transform: scale(1.1); /* Slight scale effect on hover */
 }
 
 .headerTitle {
     margin-left: 12px;
     font-weight: 600;
-    font-size: 1.2rem; /* Increased font size for visibility */
 }
 
 .headerNavList {
     display: flex;
     list-style: none;
-    padding: 0;
-    align-items: center; /* Ensuring vertical alignment */
+    gap: 25px; /* Utilizing gap for consistent spacing between list items */
 }
 
 .headerNavPageLink {
-    color: inherit;
+    color: #f2f2f2;
     text-decoration: none;
     opacity: 0.75;
-    margin: 0 10px; /* Adding horizontal margin */
-    transition: opacity 0.3s ease; /* Smoother transition for hover effect */
+    transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0 10px; /* Padding added for clickable area and to ensure spacing on sides */
 }
 
 .headerNavPageLink:hover {
     opacity: 1;
 }
 
+/* Responsive adjustment if necessary */
+@media (max-width: 768px) {
+    .headerContainer {
+        justify-content: space-between; /* Adjusts spacing on smaller screens */
+    }
+
+    .headerNavList {
+        gap: 10px; /* Smaller gap for smaller screens */
+    }
+
+    .headerNavPageLink {
+        padding: 0 5px; /* Smaller padding for smaller screens */
+    }
+}
 .headerNavPageLinkActive {
-    text-decoration: underline; /* Highlighting active link */
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: bold; /* Make active link bolder */
+    opacity: 1; /* Active link should be fully opaque */
 }
 
 .headerNavLeftMargin {
@@ -73,13 +79,6 @@
     font-weight: normal;
     margin-left: 40px;
 }
-
-.microsoftLogo {
-    height: 23px;
-    font-weight: 600;
-}
-
-.githubLogo {
+.crimsonLogo {
     height: 20px;
-    margin-left: 10px; /* Added left margin for spacing */
 }

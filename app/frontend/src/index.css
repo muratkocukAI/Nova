@@ -1,4 +1,5 @@
-/* Global styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
     box-sizing: border-box;
 }
@@ -8,23 +9,13 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif; /* Poppins is set as the primary font */
+}
+
+html {
     background: #f2f2f2;
-    font-family:
-        "Poppins",
-        "Segoe UI",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #333; /* Ensuring text color is defined for readability */
 }
 
 #root {

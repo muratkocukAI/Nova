@@ -10,7 +10,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 20px; /* Add padding for better spacing */
 }
 
 .oneshotBottomSection {
@@ -27,54 +26,41 @@
     font-size: 4rem;
     font-weight: 600;
     margin-top: 130px;
-    color: #333; /* Improved readability with darker color */
-    text-align: center; /* Center-align for better presentation */
 }
 
 @media only screen and (max-width: 800px) {
     .oneshotTitle {
         font-size: 3rem;
-        margin-top: 20px; /* Reduced margin-top for smaller screens */
+        font-weight: 600;
+        margin-top: 0;
     }
 }
 
-.oneshotQuestionInput,
+.oneshotQuestionInput {
+    max-width: 800px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .oneshotAnswerContainer {
     max-width: 800px;
     width: 100%;
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners for modern look */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-bottom: 20px; /* Added margin for better separation */
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .oneshotAnalysisPanel {
     width: 600px;
-    margin: 20px auto; /* Centering the panel */
-    padding: 20px; /* Additional padding for content */
-    border-radius: 8px; /* Consistent rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+    margin-left: 20px;
 }
 
 .oneshotSettingsSeparator {
     margin-top: 15px;
-    width: 100%; /* Ensure separator spans full width */
-    border-bottom: 1px solid #ddd; /* Define a clear separator */
 }
 
 .settingsButton {
     align-self: flex-end;
-    margin: 20px;
-    padding: 10px 15px;
-    background-color: #850f34; /* Use brand color for button */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    /* Button hover effect */
-    &:hover {
-        background-color: darken(#850f34, 10%);
-    }
+    margin-right: 20px;
+    margin-top: 20px;
 }
